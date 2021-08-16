@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReservasAereasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DatosReserva">
+    <Key>
+      <PropertyRef Name="IdReserva" />
+    </Key>
+    <Property Name="IdReserva" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AeropuertoDeOrigen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HoraSalida" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="AeropuertoDeLlegada" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aerolinea" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="NumeroVuelo" Type="Int32" />
+    <Property Name="TipoPasajero" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PrecioTP">
+    <Key>
+      <PropertyRef Name="IdTipoPasajero" />
+    </Key>
+    <Property Name="IdTipoPasajero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PrecioTP1" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ReservasAereasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DatosReserva" EntityType="Self.DatosReserva" />
+    <EntitySet Name="PrecioTP" EntityType="Self.PrecioTP" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReservasAereasModelStoreContainer" CdmEntityContainer="ReservasAereasEntities1">
+    <EntitySetMapping Name="DatosReserva">
+      <EntityTypeMapping TypeName="ReservasAereasModel.DatosReserva">
+        <MappingFragment StoreEntitySet="DatosReserva">
+          <ScalarProperty Name="FechaViaje" ColumnName="FechaViaje" />
+          <ScalarProperty Name="HoraLlegada" ColumnName="HoraLlegada" />
+          <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
+          <ScalarProperty Name="AeropuertoDeOrigen" ColumnName="AeropuertoDeOrigen" />
+          <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
+          <ScalarProperty Name="AeropuertoDeLlegada" ColumnName="AeropuertoDeLlegada" />
+          <ScalarProperty Name="Aerolinea" ColumnName="Aerolinea" />
+          <ScalarProperty Name="NumeroVuelo" ColumnName="NumeroVuelo" />
+          <ScalarProperty Name="TipoPasajero" ColumnName="TipoPasajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTP">
+      <EntityTypeMapping TypeName="ReservasAereasModel.PrecioTP">
+        <MappingFragment StoreEntitySet="PrecioTP">
+          <ScalarProperty Name="IdTipoPasajero" ColumnName="IdTipoPasajero" />
+          <ScalarProperty Name="PrecioTP1" ColumnName="PrecioTP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_TraerData" FunctionName="ReservasAereasModel.Store.SP_TraerData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ReservasAereasModel.SP_TraerData_Result">
+          <ScalarProperty Name="IdReserva" ColumnName="IdReserva" />
+          <ScalarProperty Name="AeropuertoDeOrigen" ColumnName="AeropuertoDeOrigen" />
+          <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
+          <ScalarProperty Name="AeropuertoDeLlegada" ColumnName="AeropuertoDeLlegada" />
+          <ScalarProperty Name="Aerolinea" ColumnName="Aerolinea" />
+          <ScalarProperty Name="NumeroVuelo" ColumnName="NumeroVuelo" />
+          <ScalarProperty Name="TipoPasajero" ColumnName="TipoPasajero" />
+          <ScalarProperty Name="HoraLlegada" ColumnName="HoraLlegada" />
+          <ScalarProperty Name="FechaViaje" ColumnName="FechaViaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
